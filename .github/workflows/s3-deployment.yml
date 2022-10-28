@@ -17,7 +17,9 @@ jobs:
         with:
           node-version: 16
       - name: listin files
-        run: ls -l
+        run: |
+          pwd
+          ls -l
       - name: uploading website files to s3 bucket
         run : aws s3 cp * s3://devopsexpert.in
       # - name: coping text file to s3 bucket
