@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+      - name: listin files
+        run: ls -l
       - name: uploading website files to s3 bucket
         run : aws s3 cp website-code/* s3://devopsexpert.in
       # - name: coping text file to s3 bucket
